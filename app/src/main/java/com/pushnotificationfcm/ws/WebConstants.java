@@ -6,9 +6,9 @@ package com.pushnotificationfcm.ws;
 
 public class WebConstants {
 
-// Main URL: http://europa.narola.online/pg/WorkDeskAppAPIs/WorkDeskAppService.php?Service=Login
-    private static final String HOST_URL  = "http://europa.narola.online";
-    public static final String SERVER_MAIN_URL = HOST_URL + "/pg/PPA/Practice/MobileAppService.php?Service=";
+
+    private static final String HOST_URL  = "";
+    public static final String SERVER_MAIN_URL = HOST_URL + "";
     public static final String SERVICE_LOGIN="Login";
     public static final String SERVICE_REGISTRATION="RegisterUserDetails";
 
