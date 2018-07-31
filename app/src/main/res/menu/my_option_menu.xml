@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Interstitial Ad"
+        android:id="@+id/menu_interstitial_ad"/>
+    <item
+        android:title="Rewarded Video Ad"
+        android:id="@+id/menu_rewarded_video_ad"/>
+
+</menu>

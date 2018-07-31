@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">PushNotificationFCM</string>
+    <string name="msg">After succesfull registration, \n you will get <b>Notification</b> in this Device.</string>
+    <string name="ADMOB_ID">ca-app-pub-9463442329397045~9260665128</string>
+    <string name="ADMOB_TEST_ID">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="Interstitial_ad_ID">ca-app-pub-3940256099942544/1033173712</string>
+
+    <string name="Rewarded_video_ID">ca-app-pub-3940256099942544/5224354917</string>
+
+    <string name="test_device_id">C04B1BFFB0774708339BC273F8A43708</string>
+
+    <!--PushNotificationFCM
+Android
+App ID: ca-app-pub-9463442329397045~9260665128-->
+</resources>
