@@ -2,8 +2,9 @@
 ------------------------------------------------
 ### Banner Advertisement
 
-![Banner Advertisement](BannerAdvertisement.png)
+<img src="BannerAdvertisement.png" width="250" height="400">
 
+----------------------------------------------
 ### Full Screen Advertisement
 
-![Full Screen Advertisement](FullScreenAdvertisment.png)
+<img src="FullScreenAdvertisment.png" width="250" height="400">
