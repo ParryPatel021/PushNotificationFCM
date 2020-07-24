@@ -1,8 +1,9 @@
 package com.pushnotificationfcm.activity;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -23,6 +24,11 @@ public class InterstitialAdActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interstitial_ad);
 
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle("InterstitialAd");
+        }
+
         btnSHowAdd=findViewById(R.id.btnSHowAdd);
 
         /** InterstitialAd Initialization */
@@ -37,7 +43,9 @@ public class InterstitialAdActivity extends AppCompatActivity {
                 if (mInterstitialAd.isLoaded()) {
                     mInterstitialAd.show();
                 } else {
+                    mInterstitialAd.loadAd(new AdRequest.Builder().build());
                     Log.d(TAG, "The interstitial wasn't loaded yet.");
+                    ConstantMethod.showToast(InterstitialAdActivity.this,"The interstitial wasn't loaded yet.");
                 }
             }
         });
@@ -76,8 +84,13 @@ public class InterstitialAdActivity extends AppCompatActivity {
                 mInterstitialAd.loadAd(new AdRequest.Builder().build());
             }
         });
+    }
 
-
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId()== android.R.id.home){
+            onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

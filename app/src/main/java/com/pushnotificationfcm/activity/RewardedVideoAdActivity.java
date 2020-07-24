@@ -1,7 +1,9 @@
 package com.pushnotificationfcm.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
@@ -20,7 +22,12 @@ public class RewardedVideoAdActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rewarded_vide_ad);
 
-        mRewardedVideoAd= MobileAds.getRewardedVideoAdInstance(this);
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle("RewardedVideoAd");
+        }
+
+        mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
 
         mRewardedVideoAd.setRewardedVideoAdListener(new RewardedVideoAdListener() {
             @Override
@@ -40,7 +47,8 @@ public class RewardedVideoAdActivity extends AppCompatActivity {
 
             @Override
             public void onRewardedVideoAdClosed() {
-                ConstantMethod.showToast(RewardedVideoAdActivity.this,"Ad Closed");            }
+                ConstantMethod.showToast(RewardedVideoAdActivity.this, "Ad Closed");
+            }
 
             @Override
             public void onRewarded(RewardItem rewardItem) {
@@ -100,6 +108,14 @@ public class RewardedVideoAdActivity extends AppCompatActivity {
     public void onDestroy() {
         mRewardedVideoAd.destroy(this);
         super.onDestroy();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId()== android.R.id.home){
+            onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

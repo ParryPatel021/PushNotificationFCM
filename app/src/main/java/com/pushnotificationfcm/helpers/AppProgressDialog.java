@@ -7,17 +7,20 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentManager;
+
 import com.pushnotificationfcm.R;
 
 
-public class AppProgressDialog extends android.support.v4.app.DialogFragment {
+public class AppProgressDialog extends DialogFragment {
     private static final int DELAY_MILLISECOND = 150;
     private static final int SHOW_MIN_MILLISECOND = 100;
 
@@ -82,7 +85,7 @@ public class AppProgressDialog extends android.support.v4.app.DialogFragment {
     }
 
     @Override
-    public void show(final android.support.v4.app.FragmentManager fm, final String tag) {
+    public void show(final FragmentManager fm, final String tag) {
         mStartMillisecond = System.currentTimeMillis();
         startedShowing = false;
         mStopMillisecond = Long.MAX_VALUE;
@@ -96,7 +99,7 @@ public class AppProgressDialog extends android.support.v4.app.DialogFragment {
         }, DELAY_MILLISECOND);
     }
 
-    private void showDialogAfterDelay(android.support.v4.app.FragmentManager fm, String tag) {
+    private void showDialogAfterDelay(FragmentManager fm, String tag) {
         startedShowing = true;
         super.show(fm, tag);
 

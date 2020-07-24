@@ -13,4 +13,13 @@
     <!--PushNotificationFCM
 Android
 App ID: ca-app-pub-9463442329397045~9260665128-->
+
+    <string name="text_sign_up">SignUp</string>
+    <string name="text_user_name">Username</string>
+    <string name="text_email">Email</string>
+    <string name="text_password">Password</string>
+    <string name="text_ad_view">Ad View Banner</string>
+    <string name="text_interstitial_ad">Interstitial Advertise</string>
+    <string name="text_rewarded_video">Rewarded Video Advertise</string>
+
 </resources>

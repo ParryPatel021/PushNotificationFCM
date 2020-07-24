@@ -5,8 +5,6 @@ package com.pushnotificationfcm.helpers;
  */
 public class WSConstants {
 
-
-
     public static String SERVER_MAIN_URL = "http://192.168.1.74/api_demo/web_service/WebServiceDemo.php?Service=";
     /***
      /**
